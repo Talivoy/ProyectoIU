@@ -1,12 +1,60 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>clases iU</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brainroot.clothes</title>
 </head>
 <body>
+    <header>
+        <h1>Nuestra Colección de Poleras</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+        <form role="search">
+            <input type="search" placeholder="Buscar poleras..." aria-label="Buscar">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
 
-<h1>Hola</h1>
-<p>lore ipsum</p>
+    <main>
+        <!-- Página de Inicio -->
+        <section id="inicio">
+            <h2>Bienvenidos a nuestra Tienda de Poleras</h2>
+            <p>Descubre nuestra amplia selección de poleras para toda la familia.</p>
+            <a href="catalogo.html">Ver Catálogo</a>
+        </section>
 
+        <!-- Página de Catálogo -->
+        <section id="catalogo">
+            <h2>Nuestro Catálogo</h2>
+            <article class="polera">
+                <h3>Polera Diseño Exclusivo</h3>
+                <img src="ruta/a/imagen.jpg" alt="Polera Diseño Exclusivo">
+                <p>Descripción de la polera...</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <!-- Más artículos del catálogo -->
+        </section>
+
+        <!-- Página de Carrito -->
+        <section id="carrito">
+            <h2>Tu Carrito de Compras</h2>
+            <ul>
+                <li>Polera Diseño Exclusivo - $19.99</li>
+                <!-- Más items del carrito -->
+            </ul>
+            <p>Total: $10.000 clp</p>
+            <button>Proceder al pago</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nuestra Tienda de Poleras. Todos los derechos reservados.</p>
+    </footer>
 </body>
-</html> 
+</html>
