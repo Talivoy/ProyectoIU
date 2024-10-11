@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brainrotClothes/Productos</title>
+    <link rel="stylesheet" href="Estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="logo mb-4 md:mb-0">
+                <img src="Recursos/Logonaso.png" alt="Logo" class="h-10">
+            </div>
+            <nav class="mb-4 md:mb-0">
+                <ul class="flex flex-wrap justify-center space-x-4">
+                    <li><a href="index.html" class="hover:text-purple-300">Inicio</a></li>
+                    <li><a href="productos.html" class="hover:text-purple-300">Productos</a></li>
+                    <li><a href="limitados.html" class="hover:text-purple-300">Limitados</a></li>
+                    <li><a href="proximamente.html" class="hover:text-purple-300 font-bold">Próximamente</a></li>
+                    <li><a href="favoritos.html" class="hover:text-purple-300">Favoritos</a></li>
+                    <li><a href="Preguntas.html" class="hover:text-purple-300">Preguntas Frecuentes</a></li>
+                    <li><a href="Contactanos.html" class="hover:text-purple-300">Contáctenos</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="authButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                    Cuenta
+                </button>
+                <button id="cartButton" class="bg-green-500 hover:bg-green-600  text-white px-4 py-2 rounded">
+                    Carrito
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        <h1 class="text-4xl font-bold mb-8 text-center">Nuestros Productos</h1>
+        
+        <section class="mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <div class="mb-4 md:mb-0">
+                    <label for="sort" class="mr-2">Ordenar por:</label>
+                    <select id="sort" class="border rounded p-2">
+                        <option value="popular">Más populares</option>
+                        <option value="price-low">Precio: Menor a Mayor</option>
+                        <option value="price-high">Precio: Mayor a Menor</option>
+                        <option value="name">Nombre</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="category" class="mr-2">Categoría:</label>
+                    <select id="category" class="border rounded p-2">
+                        <option value="all">Todas las categorías</option>
+                        <option value="electronics">Electrónicos</option>
+                        <option value="clothing">Ropa</option>
+                        <option value="home">Hogar</option>
+                        <option value="beauty">Belleza</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="productList">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+
+        <div class="flex justify-center mt-8">
+            <button id="loadMore" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full">
+                Cargar más productos
+            </button>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>Email: info@mitienda.com</p>
+            <div class="redes-sociales mt-2">
+                <a href="#" class="mx-2"><img src="Recursos/Facebook.png" alt="Facebook" class="h-6 inline"></a>
+                <a href="#" class="mx-2"><img src="Recursos/XTwitter.png" alt="Twitter" class="h-6 inline"></a>
+                <a href="#" class="mx-2"><img src="Recursos/Instagram.png" alt="Instagram" class="h-6 inline"></a>
+            </div>
+            <p class="mt-2">© 2024 Mi Tienda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Autenticación -->
+    <div id="authModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-full max-w-md mx-4">
+            <h2 class="text-2xl font-bold mb-4">Iniciar Sesión / Registrarse</h2>
+            <form id="authForm">
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                    <input type="password" id="password" name="password" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600">Iniciar Sesión</button>
+            </form>
+            <p class="mt-4 text-center">
+                ¿No tienes una cuenta? <a href="#" class="text-blue-500 hover:underline">Regístrate</a>
+            </p>
+            <button id="closeAuthModal" class="mt-4 w-full bg-gray-300 text-gray-800 rounded-md py-2 hover:bg-gray-400">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-full max-w-md mx-4">
+            <h2 class="text-2xl font-bold mb-4">Carrito de Compras</h2>
+            <div id="cartItems" class="mb-4">
+                <!-- Los items del carrito se cargarán aquí dinámicamente -->
+            </div>
+            <div class="flex justify-between items-center font-bold">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button id="checkoutButton" class="mt-4 w-full bg-green-500 text-white rounded-md py-2 hover:bg-green-600">Proceder al Pago</button>
+            <button id="closeCartModal" class="mt-4 w-full bg-gray-300 text-gray-800 rounded-md py-2 hover:bg-gray-400">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
