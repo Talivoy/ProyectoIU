@@ -1,9 +1,9 @@
 
 // Datos de ejemplo para productos destacados
 const featuredProducts = [
-    { id: 1, name: "Producto Destacado 1", description: "Descripción del Producto 1", price: 19.99 },
-    { id: 2, name: "Producto Destacado 2", description: "Descripción del Producto 2", price: 29.99 },
-    { id: 3, name: "Producto Destacado 3", description: "Descripción del Producto 3", price: 39.99 },
+    { id: 1, name: "Producto Destacado 1", description: "Descripción del Producto 1", price: 15.000 },
+    { id: 2, name: "Producto Destacado 2", description: "Descripción del Producto 2", price: 15.000 },
+    { id: 3, name: "Producto Destacado 3", description: "Descripción del Producto 3", price: 15.000 },
 ];
 
 // Carrito de compras
