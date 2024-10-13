@@ -4,6 +4,9 @@ const featuredProducts = [
     { id: 1, name: "Producto Destacado 1", description: "Descripción del Producto 1", price: 15.000 },
     { id: 2, name: "Producto Destacado 2", description: "Descripción del Producto 2", price: 15.000 },
     { id: 3, name: "Producto Destacado 3", description: "Descripción del Producto 3", price: 15.000 },
+    { id: 4, name: "producto Destacado 4", description: "Descripciónc del Producto 4", price: 15.000},
+    { id: 5, name: "Producto Destacado 5", description: "Descripción del Producto 5", price: 15.000 },
+    { id: 6, name: "producto Destacado 6", description: "Descripciónc del Producto 6", price: 15.000},
 ];
 
 // Carrito de compras
