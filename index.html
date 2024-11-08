@@ -3,40 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brainrotClothes/Inicio </title>
+    <title>brainrotClothes/Inicio</title>
     <link rel="stylesheet" href="Estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-    <header class="bg-primary text-white p-4">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="logo mb-4 md:mb-0">
-                <img src="Recursos/Logonaso.png" alt="Logo" class="h-10">
+    <header class="bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <!-- Barra superior con logo y botones -->
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="Recursos/Logonaso.png" alt="Logo" class="h-10">
+                </div>
+
+                <!-- Botones de escritorio (ocultos en móvil) -->
+                <nav class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="hover:text-secondary-light">Inicio</a>
+                    <a href="productos.html" class="hover:text-secondary-light">Productos</a>
+                    <a href="limitados.html" class="hover:text-secondary-light">Limitados</a>
+                    <a href="proximamente.html" class="hover:text-secondary-light">Próximamente</a>
+                    <a href="favoritos.html" class="hover:text-secondary-light">Favoritos</a>
+                    <a href="Preguntas.html" class="hover:text-secondary-light">Preguntas Frecuentes</a>
+                    <a href="Contactanos.html" class="hover:text-secondary-light">Contáctenos</a>
+                </nav>
+
+                <!-- Botones de cuenta y carrito -->
+                <div class="flex items-center space-x-4">
+                    <button id="authButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                        Cuenta
+                    </button>
+                    <button id="cartButton" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded flex items-center">
+                        <span>Carrito</span>
+                        <span id="cartCount" class="ml-2 bg-white text-green-500 rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    <!-- Botón hamburguesa para móvil -->
+                    <button id="menuButton" class="md:hidden flex items-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <nav class="mb-4 md:mb-0">
-                <ul class="flex flex-wrap justify-center space-x-4">
-                    <li><a href="index.html" class="hover:text-secondary-light">Inicio</a></li>
-                    <li><a href="productos.html" class="hover:text-secondary-light">Productos</a></li>
-                    <li><a href="limitados.html" class="hover:text-secondary-light">Limitados</a></li>
-                    <li><a href="proximamente.html" class="hover:text-secondary-light">Próximamente</a></li>
-                    <li><a href="favoritos.html" class="hover:text-secondary-light">Favoritos</a></li>
-                    <li><a href="Preguntas.html" class="hover:text-secondary-light">Preguntas Frecuentes</a></li>
-                    <li><a href="Contactanos.html" class="hover:text-secondary-light">Contáctenos</a></li>
-                </ul>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <button id="authButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
-                    Cuenta
-                </button>
-                <button id="cartButton" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
-                    Carrito
-                </button>
+
+            <!-- Menú móvil (oculto por defecto) -->
+            <div id="mobileMenu" class="md:hidden hidden">
+                <nav class="py-4 space-y-2">
+                    <a href="index.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Inicio</a>
+                    <a href="productos.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Productos</a>
+                    <a href="limitados.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Limitados</a>
+                    <a href="proximamente.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Próximamente</a>
+                    <a href="favoritos.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Favoritos</a>
+                    <a href="Preguntas.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Preguntas Frecuentes</a>
+                    <a href="Contactanos.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Contáctenos</a>
+                </nav>
             </div>
         </div>
     </header>
 
     <main class="container mx-auto py-8 px-4">
-       <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+        <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10 z-0">
             <img src="https://readymadeui.com/cardImg.webp" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
       
             <div class="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
@@ -49,53 +75,19 @@
                 revisa aqui
               </button>
             </div>
-          </div>
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">Productos Destacados</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="featuredProducts"> 
-        </section>
-        
-        <section class="mb-12">
+        </div>
+
+        <section class="mb-12 mt-12">
             <h2 class="text-2xl font-bold mb-4">Productos Destacados</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="featuredProducts">
-              
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">Categorías Populares</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="productos.html?category=electronics" class="bg-blue-100 p-4 rounded-lg text-center hover:bg-blue-200 transition-colors">
-                    <img src="Recursos/calacasicon.png" alt="Calacas chidas" class="w-16 h-16 mx-auto mb-2">
-                    <span class="font-semibold">Calacas chidas</span>
-                </a>
-                <a href="productos.html?category=clothing" class="bg-green-100 p-4 rounded-lg text-center hover:bg-green-200 transition-colors">
-                    <img src="Recursos/clothing-icon.png" alt="Colecciones" class="w-16 h-16 mx-auto mb-2">
-                    <span class="font-semibold">Colecciones</span>
-                </a>
-                <a href="productos.html?category=home" class="bg-yellow-100 p-4 rounded-lg text-center hover:bg-yellow-200 transition-colors">
-                    <img src="Recursos/.png" alt="Limitadas" class="w-16 h-16 mx-auto mb-2">
-                    <span class="font-semibold">Limitadas</span>
-                </a>
-                <a href="productos.html?category=beauty" class="bg-pink-100 p-4 rounded-lg text-center hover:bg-pink-200 transition-colors">
-                    <img src="Recursos/con.png" alt="Animu" class="w-16 h-16 mx-auto mb-2">
-                    <span class="font-semibold">Animu</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">Ofertas Especiales</h2>
-            <div class="bg-yellow-100 p-6 rounded-lg text-center">
-                <h3 class="text-xl font-bold mb-2">¡Descuentos de hasta el 50%!</h3>
-                <p class="mb-4">No te pierdas nuestras increíbles ofertas en productos seleccionados.</p>
-                <a href="productos.html?sale=true" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-full inline-block">Ver Ofertas</a>
+                <!-- Los productos destacados se cargarán aquí dinámicamente -->
             </div>
         </section>
     </main>
 
     <footer class="bg-primary text-white p-4 mt-8">
         <div class="container mx-auto text-center">
-            <p>Email: info@brainrot.com</p>
+            <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1a8afa7ae81a3b3a0a8afb3aeb5efa2aeac">[email&#160;protected]</a></p>
             <div class="redes-sociales mt-2">
                 <a href="#" class="mx-2"><img src="Recursos/Facebook.png" alt="Facebook" class="h-6 inline"></a>
                 <a href="#" class="mx-2"><img src="Recursos/XTwitter.png" alt="Twitter" class="h-6 inline"></a>
@@ -106,43 +98,56 @@
     </footer>
 
     <!-- Modal de Autenticación -->
-    <div id="authModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div id="authModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
         <div class="bg-white p-8 rounded-lg w-full max-w-md mx-4">
-            <h2 class="text-2xl font-bold mb-4">Iniciar Sesión / Registrarse</h2>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Iniciar Sesión / Registrarse</h2>
+                <button id="closeAuthModal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
             <form id="authForm">
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
-                    <input type="password" id="password" name="password" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                    <input type="password" id="password" name="password" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600">Iniciar Sesión</button>
             </form>
             <p class="mt-4 text-center">
                 ¿No tienes una cuenta? <a href="#" class="text-blue-500 hover:underline">Regístrate</a>
             </p>
-            <button id="closeAuthModal" class="mt-4 w-full bg-gray-300 text-gray-800 rounded-md py-2 hover:bg-gray-400">Cerrar</button>
         </div>
     </div>
 
     <!-- Modal del Carrito -->
     <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
         <div class="bg-white p-8 rounded-lg w-full max-w-md mx-4">
-            <h2 class="text-2xl font-bold mb-4">Carrito de Compras</h2>
-            <div id="cartItems" class="mb-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Carrito de Compras</h2>
+                <button id="closeCartModal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="cartItems" class="mb-4 space-y-4">
                 <!-- Los items del carrito se cargarán aquí dinámicamente -->
             </div>
-            <div class="flex justify-between items-center font-bold">
+            <div class="flex justify-between items-center font-bold text-xl">
                 <span>Total:</span>
-                <span id="cartTotal">$0.00</span>
+                <span id="cartTotal">$0</span>
             </div>
             <button id="checkoutButton" class="mt-4 w-full bg-green-500 text-white rounded-md py-2 hover:bg-green-600">Proceder al Pago</button>
-            <button id="closeCartModal" class="mt-4 w-full bg-gray-300 text-gray-800 rounded-md py-2 hover:bg-gray-400">Cerrar</button>
         </div>
     </div>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
