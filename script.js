@@ -24,6 +24,30 @@ const products = [
         image: "Recursos/polera3.jpg",
         category: "calacas"
     },
+    {
+        id: 4,
+        name: "Polera Retro",
+        description: "Polera con diseño retro de los 80s",
+        price: 17000,
+        image: "Recursos/polera4.jpg",
+        category: "retro"
+    },
+    {
+        id: 5,
+        name: "Polera Geek",
+        description: "Polera con diseño para amantes de la tecnología",
+        price: 16500,
+        image: "Recursos/polera5.jpg",
+        category: "geek"
+    },
+    {
+        id: 6,
+        name: "Polera Minimalista",
+        description: "Polera con diseño minimalista y elegante",
+        price: 15500,
+        image: "Recursos/polera6.jpg",
+        category: "minimalista"
+    },
     // Agrega más productos aquí
 ];
 
