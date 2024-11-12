@@ -8,29 +8,55 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-    <header class="bg-primary text-white p-4">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="logo mb-4 md:mb-0">
-                <img src="Recursos/Logonaso.png" alt="Logo" class="h-10">
+    <header class="bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <!-- Barra superior con logo y botones -->
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="Recursos/Logonaso.png" alt="Logo" class="h-10">
+                </div>
+
+                <!-- Botones de escritorio (ocultos en móvil) -->
+                <nav class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="hover:text-secondary-light">Inicio</a>
+                    <a href="productos.html" class="hover:text-secondary-light">Productos</a>
+                    <a href="limitados.html" class="hover:text-secondary-light">Limitados</a>
+                    <a href="proximamente.html" class="hover:text-secondary-light">Próximamente</a>
+                    <a href="favoritos.html" class="hover:text-secondary-light">Favoritos</a>
+                    <a href="Preguntas.html" class="hover:text-secondary-light">Preguntas Frecuentes</a>
+                    <a href="Contactanos.html" class="hover:text-secondary-light">Contáctenos</a>
+                </nav>
+
+                <!-- Botones de cuenta y carrito -->
+                <div class="flex items-center space-x-4">
+                    <button id="authButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                        Cuenta
+                    </button>
+                    <button id="cartButton" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded flex items-center">
+                        <span>Carrito</span>
+                        <span id="cartCount" class="ml-2 bg-white text-green-500 rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    <!-- Botón hamburguesa para móvil -->
+                    <button id="menuButton" class="md:hidden flex items-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <nav class="mb-4 md:mb-0">
-                <ul class="flex flex-wrap justify-center space-x-4">
-                    <li><a href="index.html" class="hover:text-secondary-light">Inicio</a></li>
-                    <li><a href="productos.html" class="hover:text-secondary-light">Productos</a></li>
-                    <li><a href="limitados.html" class="hover:text-secondary-light">Limitados</a></li>
-                    <li><a href="proximamente.html" class="hover:text-secondary-light">Próximamente</a></li>
-                    <li><a href="favoritos.html" class="hover:text-secondary-light">Favoritos</a></li>
-                    <li><a href="Preguntas.html" class="hover:text-secondary-light">Preguntas Frecuentes</a></li>
-                    <li><a href="Contactanos.html" class="hover:text-secondary-light">Contáctenos</a></li>
-                </ul>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <button id="authButton" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
-                    Cuenta
-                </button>
-                <button id="cartButton" class="bg-green-500 hover:bg-green-600  text-white px-4 py-2 rounded">
-                    Carrito
-                </button>
+
+            <!-- Menú móvil (oculto por defecto) -->
+            <div id="mobileMenu" class="md:hidden hidden">
+                <nav class="py-4 space-y-2">
+                    <a href="index.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Inicio</a>
+                    <a href="productos.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Productos</a>
+                    <a href="limitados.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Limitados</a>
+                    <a href="proximamente.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Próximamente</a>
+                    <a href="favoritos.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Favoritos</a>
+                    <a href="Preguntas.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Preguntas Frecuentes</a>
+                    <a href="Contactanos.html" class="block hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors">Contáctenos</a>
+                </nav>
             </div>
         </div>
     </header>
