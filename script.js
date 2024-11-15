@@ -5,15 +5,15 @@ const products = [
         name: "Polera Brainrot",
         description: "Polera de algodón con diseño Brainrot",
         price: 15000,
-        image: "Recursos/polera1.jpg",
+        image: "Recursos/agood.png",
         category: "colecciones"
     },
     {
         id: 2,
-        name: "Polera Anime",
-        description: "Polera de anime edición limitada",
+        name: "Polera Sans",
+        description: "Polera de edición limitada",
         price: 18000,
-        image: "Recursos/polera2.jpg",
+        image: "Recursos/Karol Sans.png",
         category: "anime"
     },
     {
@@ -21,23 +21,23 @@ const products = [
         name: "Polera Calaca",
         description: "Polera con diseño de calaca chida",
         price: 16000,
-        image: "Recursos/polera3.jpg",
+        image: "Recursos/CAZUELA.jpg",
         category: "calacas"
     },
     {
         id: 4,
-        name: "Polera Retro",
-        description: "Polera con diseño retro de los 80s",
+        name: "bronze age",
+        description: "Polera con diseño retro de los 3000s AC ",
         price: 17000,
-        image: "Recursos/polera4.jpg",
+        image: "Recursos/Le sunshine.png",
         category: "retro"
     },
     {
         id: 5,
         name: "Polera Geek",
-        description: "Polera con diseño para amantes de la tecnología",
+        description: "Polera con diseño para amantes de ",
         price: 16500,
-        image: "Recursos/polera5.jpg",
+        image: "Recursos/Valdivia.png",
         category: "geek"
     },
     {
@@ -45,7 +45,7 @@ const products = [
         name: "Polera Minimalista",
         description: "Polera con diseño minimalista y elegante",
         price: 15500,
-        image: "Recursos/polera6.jpg",
+        image: "Recursos/Brainrot.png",
         category: "minimalista"
     },
     // Agrega más productos aquí
@@ -70,7 +70,7 @@ function loadProducts(container, productList) {
 
     productContainer.innerHTML = productList.map(product => `
         <div class="bg-white shadow-md rounded-lg p-6">
-            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover mb-4">
+            <img src="${product.image}" alt="${product.name}" class="w-full h-[400px] object-contain mb-4">
             <h3 class="text-xl font-bold mb-2">${product.name}</h3>
             <p class="text-gray-600 mb-4">${product.description}</p>
             <p class="text-2xl font-bold mb-4">${formatPrice(product.price)}</p>
