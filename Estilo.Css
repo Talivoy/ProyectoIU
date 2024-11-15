@@ -14,7 +14,7 @@ body {
 
 /* Header styles */
 header {
-  background-color: #4F345A; /* Darkest color from the palette */
+  background-color: #001A23; /* Darkest color from the palette */
   color: #ffffff;
   padding: 1rem 0;
 }
@@ -55,7 +55,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-  background-color: #5D4E6D; /* Second darkest color from the palette */
+  background-color: #31493C; /* Second darkest color from the palette */
 }
 
 .btn-outline {
@@ -82,7 +82,7 @@ main {
 
 h1, h2, h3 {
   margin-bottom: 1rem;
-  color: #4F345A; /* Darkest color from the palette */
+  color: #001A23; /* Darkest color from the palette */
 }
 
 /* Product grid styles */
@@ -118,7 +118,7 @@ h1, h2, h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #5D4E6D; /* Second darkest color from the palette */
+  color: #31493C; /* Second darkest color from the palette */
 }
 
 .product-price {
@@ -129,7 +129,7 @@ h1, h2, h3 {
 
 /* Footer styles */
 footer {
-  background-color: #4F345A; /* Darkest color from the palette */
+  background-color: #001A23; /* Darkest color from the palette */
   color: #ffffff;
   padding: 2rem 0;
   text-align: center;
@@ -161,7 +161,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(79, 52, 90, 0.5); /* Darkest color with opacity */
+  background-color: #001A23; /* Darkest color with opacity */
 }
 
 .modal-content {
@@ -180,7 +180,7 @@ footer {
   top: 0.5rem;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #5D4E6D; /* Second darkest color from the palette */
+  color: #31493C; /* Second darkest color from the palette */
 }
 
 /* Form styles */
@@ -191,7 +191,7 @@ form {
 
 label {
   margin-bottom: 0.5rem;
-  color: #5D4E6D; /* Second darkest color from the palette */
+  color: #31493C; /* Second darkest color from the palette */
 }
 
 input, textarea {
@@ -217,7 +217,7 @@ input, textarea {
 
 .cart-item-title {
   font-weight: bold;
-  color: #5D4E6D; /* Second darkest color from the palette */
+  color: #31493C; /* Second darkest color from the palette */
 }
 
 .cart-item-price {
@@ -248,7 +248,7 @@ input, textarea {
 .faq-question {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #5D4E6D; /* Second darkest color from the palette */
+  color: #31493C; /* Second darkest color from the palette */
 }
 
 /* Contact page styles */
@@ -343,7 +343,7 @@ input, textarea {
 }
 
 .text-gray-700 {
-  color: #5D4E6D; /* Second darkest color from the palette */
+  color: #31493C; /* Second darkest color from the palette */
 }
 
 .font-bold {
